@@ -23,22 +23,61 @@ body{
     transform: translate(-50%, -100%); 
     transform-origin: bottom; 
     z-index: 2; 
+
+    background-color: rgba(225,223,199,255); 
+    border-color: rgba(182,161,110,255);
+    border-style: solid;
+    border-width: 0.3em;
+    border-bottom-right-radius: 1em 2em;
+    border-bottom-left-radius: 1em 2em;
+
+    border-top-right-radius: 1em 5em;
+    border-top-left-radius: 1em 5em;
 } 
 
 .hand.hour-hand{ 
-    height: 20vw; 
-    background-color: red;
+    height: 7vw; 
+    background-color: rgba(225,223,199,255); 
+    border-color: rgba(182,161,110,255);
+    border-style: solid;
+    border-width: 0.3em;
+    border-bottom-right-radius: 1em 2em;
+    border-bottom-left-radius: 1em 2em;
+
+    border-top-right-radius: 1em 5em;
+    border-top-left-radius: 1em 5em;
 
 } 
   
 .hand.min-hand{ 
-    height: 20vw;
-    background-color: greenyellow; 
+    height: 9vw;   
 } 
   
 .hand.second-hand{ 
-    height: 20vw;  
+    height: 12vw;  
     transform-origin: 50% 85%; 
-   background-color: blueviolet;
 } 
 
+
+/*
+Handy
+*/
+@media only screen and (max-width: 600px) {
+    .clock{
+        width: 70vw;
+        height: 70vw;
+        background-size: 70vw 70vw;
+    }
+    .hand.hour-hand{
+        height: 12vw;
+        top: 51vh; 
+    }
+    .hand.min-hand{
+        height: 16.4vw;
+        top: 51vh; 
+    }
+    .hand.second-hand{
+        height: 21vw;
+        top: 51vh; 
+    }
+  }
