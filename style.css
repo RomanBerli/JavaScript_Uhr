@@ -1,3 +1,4 @@
+/*Background image of a Rolex*/
 .clock{
     background-image: url(img/uhr.png);
     background-size: 40vw 40vw;
@@ -6,6 +7,8 @@
     height: 40vw;
     
 }
+
+/*Content goes to the middle*/
 body{
     align-items: center;
     justify-content: center;
@@ -14,7 +17,7 @@ body{
 }
 
 
-
+/*CSS for the clockhands those apply to all*/
 .hand.hour-hand, .hand.min-hand, .hand.second-hand{ 
     width: 0.75%; 
     position: absolute; 
@@ -35,6 +38,7 @@ body{
     border-top-left-radius: 1em 5em;
 } 
 
+/*Specific CSS for Clockhand*/
 .hand.hour-hand{ 
     height: 7vw; 
     background-color: rgba(225,223,199,255); 
@@ -48,20 +52,20 @@ body{
     border-top-left-radius: 1em 5em;
 
 } 
-  
+
+  /*Specific CSS for Clockhand*/
 .hand.min-hand{ 
     height: 9vw;   
 } 
-  
+
+  /*Specific CSS for Clockhand*/
 .hand.second-hand{ 
     height: 12vw;  
     transform-origin: 50% 85%; 
 } 
 
 
-/*
-Handy
-*/
+/*Media Querry for Handy view, would work without but looks mutch better with it*/
 @media only screen and (max-width: 600px) {
     .clock{
         width: 70vw;
@@ -71,13 +75,18 @@ Handy
     .hand.hour-hand{
         height: 12vw;
         top: 51vh; 
+        border-width: 0.25em;
     }
     .hand.min-hand{
         height: 16.4vw;
         top: 51vh; 
+        border-width: 0.25em;
+
     }
     .hand.second-hand{
         height: 21vw;
         top: 51vh; 
+        border-width: 0.15em;
+
     }
   }
