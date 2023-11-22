@@ -11,4 +11,34 @@ body{
     justify-content: center;
     min-height: 100vh;
     display: flex ;
+}
+
+
+
+.hand.hour-hand, .hand.min-hand, .hand.second-hand{ 
+    width: 0.75%; 
+    position: absolute; 
+    top: 50.5vh; 
+    left: 50vw; 
+    transform: translate(-50%, -100%); 
+    transform-origin: bottom; 
+    z-index: 2; 
 } 
+
+.hand.hour-hand{ 
+    height: 20vw; 
+    background-color: red;
+
+} 
+  
+.hand.min-hand{ 
+    height: 20vw;
+    background-color: greenyellow; 
+} 
+  
+.hand.second-hand{ 
+    height: 20vw;  
+    transform-origin: 50% 85%; 
+   background-color: blueviolet;
+} 
+
