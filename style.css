@@ -1,0 +1,14 @@
+.clock{
+    background-image: url(img/uhr.png);
+    background-size: 40vw 40vw;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 40vw;
+    
+}
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex ;
+} 
