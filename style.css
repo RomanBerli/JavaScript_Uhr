@@ -1,91 +1,149 @@
 /*Background image of a Rolex*/
 .clock {
-  background-image: url(img/uhr.png);
-  background-size: 40vw 40vw;
-  background-repeat: no-repeat;
-  width: 40vw;
-  height: 40vw;
-}
-
-/*Content goes to the middle*/
-body {
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  display: flex;
-
-  background: rgb(255,255,255);
-background: radial-gradient(circle, rgba(255,255,255,1) 39%, rgba(255,254,202,1) 74%, rgba(255,244,122,1) 95%);
-}
-
-/*CSS for the clockhands those apply to all*/
-.hand.hour-hand,
-.hand.min-hand,
-.hand.second-hand {
-  width: 0.75%;
-  position: absolute;
-  top: 50.5vh;
-  left: 50vw;
-  transform: translate(-50%, -100%);
-  transform-origin: bottom;
-  z-index: 2;
-
-  background-color: rgba(225, 223, 199, 255);
-  border-color: rgba(182, 161, 110, 255);
-  border-style: solid;
-  border-width: 0.3em;
-  border-bottom-right-radius: 1em 2em;
-  border-bottom-left-radius: 1em 2em;
-
-  border-top-right-radius: 1em 5em;
-  border-top-left-radius: 1em 5em;
-}
-
-/*Specific CSS for Clockhand*/
-.hand.hour-hand {
-  height: 7vw;
-  background-color: rgba(225, 223, 199, 255);
-  border-color: rgba(182, 161, 110, 255);
-  border-style: solid;
-  border-width: 0.3em;
-  border-bottom-right-radius: 1em 2em;
-  border-bottom-left-radius: 1em 2em;
-
-  border-top-right-radius: 1em 5em;
-  border-top-left-radius: 1em 5em;
-}
-
-/*Specific CSS for Clockhand*/
-.hand.min-hand {
-  height: 9vw;
-}
-
-/*Specific CSS for Clockhand*/
-.hand.second-hand {
-  height: 12vw;
-  transform-origin: 50% 85%;
-}
-
-/*Media Querry for Handy view, would work without but looks mutch better with it*/
-@media only screen and (max-width: 600px) {
-  .clock {
-    width: 70vw;
-    height: 70vw;
-    background-size: 70vw 70vw;
+    background-image: url(img/uhr.png);
+    background-size: 40vw 40vw;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 40vw;
   }
-  .hand.hour-hand {
-    height: 12vw;
-    top: 51vh;
-    border-width: 0.25em;
+  
+  /*Content goes to the middle*/
+  body {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+  
+    background: rgb(255, 255, 255);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 39%,
+      rgba(255, 254, 202, 1) 74%,
+      rgba(255, 244, 122, 1) 95%
+    );
   }
-  .hand.min-hand {
-    height: 16.4vw;
-    top: 51vh;
-    border-width: 0.25em;
-  }
+  
+  /*CSS for the clockhands those apply to all*/
+  .hand.hour-hand,
+  .hand.min-hand,
   .hand.second-hand {
-    height: 21vw;
-    top: 51vh;
-    border-width: 0.15em;
+    width: 0.75%;
+    position: absolute;
+    top: 50.5vh;
+    left: 50vw;
+    transform: translate(-50%, -100%);
+    transform-origin: bottom;
+    z-index: 2;
+  
+    background-color: rgba(225, 223, 199, 255);
+    border-color: rgba(182, 161, 110, 255);
+    border-style: solid;
+    border-width: 0.5vw;
+    border-bottom-right-radius: 2vw 4vw;
+    border-bottom-left-radius: 2vw 4vw;
+  
+    border-top-right-radius: 2vw 10vw;
+    border-top-left-radius: 2vw 10vw;
   }
-}
+  
+  /*Specific CSS for Clockhand*/
+  .hand.hour-hand {
+    height: 7vw;
+    background-color: rgba(225, 223, 199, 255);
+    border-color: rgba(182, 161, 110, 255);
+  }
+  
+  /*Specific CSS for Clockhand*/
+  .hand.min-hand {
+    height: 9vw;
+  }
+  
+  /*Specific CSS for Clockhand*/
+  .hand.second-hand {
+    height: 12vw;
+    transform-origin: 50% 85%;
+  }
+  
+  #date {
+    position: absolute;
+    transform: translate(580%, 490%);
+  
+    font-size: 2vw;
+    border-style: groove;
+    border-width: 0.5vw;
+    width: 3vw;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 1) 5%,
+      rgba(212, 236, 255, 1) 52%
+    );
+    border-radius: 0.7vw;
+  }
+  
+  #datePopUp {
+    display: none;
+    position: absolute;
+    top: 36.5vh;
+    left: 51.5vw;
+    background-color: gainsboro;
+    border-color: black;
+    border-style: inset;
+    font-size: 2vw;
+  }
+  @media only screen and (max-width: 1100px) {
+    #datePopUp {
+      top: 41.5vh;
+      left: 51.5vw;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    #datePopUp {
+      top: 42.5vh;
+      left: 50.5vw;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #datePopUp {
+      top: 45.5vh;
+      left: 50.5vw;
+    }
+  }
+  
+  @media only screen and (max-width: 300px) {
+    #datePopUp {
+      top: 48.5vh;
+      left: 50.5vw;
+    }
+  }
+  
+  /*Media Querry for Handy view, would work, but i have chosen to not use it.
+  @media only screen and (max-width: 600px) {
+      .clock {
+        width: 70vw;
+        height: 70vw;
+        background-size: 70vw 70vw;
+      }
+      .hand.hour-hand {
+        height: 12vw;
+        top: 51vh;
+        border-width: 0.8vw;
+      }
+      .hand.min-hand {
+        height: 16.4vw;
+        top: 51vh;
+        border-width: 0.8vw;
+      }
+      .hand.second-hand {
+        height: 21vw;
+        top: 51vh;
+        border-width: 0.5vw;
+      }
+      p{
+        position: absolute; 
+        transform: translate(580%, 490%);
+      }
+    }
+    */
+  
