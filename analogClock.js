@@ -7,12 +7,10 @@ const sec = document.querySelector(".hand.second-hand");
 let oldDate = 0;
 let oldMonth = 0;
 let oldYear = 0;
-// Setting up the loop wich changes to rotation of the clock hands when required
+//Setting up a loop wich changes to rotation of the clock hands when required
 //Settinh up a transformazion affect
 
-hr.style.transition = "transform 0.5s linear";
-min.style.transition = "transform 0.5s linear";
-sec.style.transition = "transform 0.5s linear";
+
 setInterval(() => {
   // Extracting the current time from DATE() function
 
@@ -55,13 +53,14 @@ setInterval(() => {
     oldMonth = month;
     oldYear = year;
   }
+  /*Opens Pop Up if mouse hovers*/
   let datePopUper = document.querySelector("#datePopUp");
   document.addEventListener("mouseover", function (event) {
     if (event.target.id === "date") {
       datePopUper.style.display = "block";
     }
   });
-
+  /*Closes Pop Up if mouse leavs*/
   document.addEventListener("mouseout", function (event) {
     if (event.target.id === "date") {
       datePopUper.style.display = "none";
